@@ -11,8 +11,6 @@ buffy:
       hidden: true
     thanks:
       hidden: true
-    welcome:
-      template_file: welcome_message.md
     basic_command:
       - code_of_conduct:
           command: code of conduct
@@ -22,3 +20,9 @@ buffy:
       command: list editors
       team_id: 6762239
       heading: Current pyOpenSci editorial board members
+    welcome:
+      template_file: welcome_message.md
+    set_value:
+      - version:
+          only: editors
+          sample_value: "v1.0.0"
