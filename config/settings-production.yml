@@ -26,3 +26,6 @@ buffy:
       - version:
           only: editors
           sample_value: "v1.0.0"
+      - archive:
+          only: editors
+          sample_value: "10.5281/zenodo.7158585"
