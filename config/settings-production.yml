@@ -11,6 +11,8 @@ buffy:
       hidden: true
     thanks:
       hidden: true
+    welcome:
+      template_file: welcome_message.md
     basic_command:
       - code_of_conduct:
           command: code of conduct
