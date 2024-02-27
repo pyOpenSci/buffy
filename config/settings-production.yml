@@ -20,6 +20,7 @@ buffy:
       command: list editors
       team_id: 6762239
       heading: Current pyOpenSci editorial board members
+      description: "Get a list of all editors's GitHub handles"
     welcome:
       template_file: welcome_message.md
     set_value:
