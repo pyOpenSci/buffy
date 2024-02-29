@@ -23,6 +23,11 @@ buffy:
       description: "Get a list of all editors's GitHub handles"
     welcome:
       template_file: welcome_message.md
+    label_command:
+      only: editors
+      command: seeking reviewers
+      add_labels:
+            - "2/seeking-reviewers"
     set_value:
       - version:
           only: editors
