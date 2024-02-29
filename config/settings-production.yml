@@ -27,7 +27,7 @@ buffy:
       only: editors
       command: seeking reviewers
       add_labels:
-            - "2/seeking-reviewers"
+        - "2/seeking-reviewers"
     set_value:
       - version:
           only: editors
