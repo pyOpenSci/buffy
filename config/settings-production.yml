@@ -32,6 +32,15 @@ buffy:
         - "1/editor-assigned"
       remove_labels:
         - "0/pre-review-checks"
+    assign_eic:
+      template_file: editor-in-chief_checklist.md
+      only: editors
+      command: assign eic
+      remove_labels:
+        - "New Submission!"
+      add_labels:
+        - "0/pre-review-checks"
+      add_as_assignee: true
     label_command:
       only: editors
       command: assign editor
@@ -39,11 +48,13 @@ buffy:
         - "1/editor-assigned"
       remove_labels:
         - "0/pre-review-checks"
-    label_command:
+    seeking_reviewers:
       only: editors
       command: seeking reviewers
       add_labels:
         - "2/seeking-reviewers"
+      remove_labels:
+        - "1/editor-assigned"
     set_value:
       - version:
           only: editors
