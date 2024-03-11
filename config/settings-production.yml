@@ -41,7 +41,7 @@ buffy:
       add_labels:
         - "0/pre-review-checks"
       add_as_assignee: true
-    label_command:
+    assign_editor:
       only: editors
       command: assign editor
       add_labels:
