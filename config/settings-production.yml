@@ -25,6 +25,13 @@ buffy:
       template_file: welcome_message.md
     label_command:
       only: editors
+      command: assign editor
+      add_labels:
+        - "1/editor-assigned"
+      remove_labels:
+        - "0/pre-review-checks"
+    label_command:
+      only: editors
       command: seeking reviewers
       add_labels:
         - "2/seeking-reviewers"
