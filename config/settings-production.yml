@@ -24,24 +24,10 @@ buffy:
     welcome:
       template_file: welcome_message.md
     label_command:
-      add_remove_assignee:
-        only: editors
-        command: assign editor
-        add_labels:
-          - "1/editor-assigned"
-        remove_labels:
-          - "0/pre-review-checks"
-    label_command:
       only: editors
       command: seeking reviewers
       add_labels:
         - "2/seeking-reviewers"
-    pyopensci_reviewers:
-      only:
-        - editors
-      if:
-        role_assigned: editor
-        reject_msg: "Can't assign reviewer because there is no editor assigned for this submission yet"
     set_value:
       - version:
           only: editors
@@ -49,6 +35,3 @@ buffy:
       - archive:
           only: editors
           sample_value: "10.5281/zenodo.7158585"
-      - reviewers:
-          only: editors
-          sample_value: "@username"
