@@ -24,6 +24,14 @@ buffy:
     welcome:
       template_file: welcome_message.md
     label_command:
+    # How do i assign the issue to a user name?
+    # pyosbot assign editor @lwasser or something like that?
+      add_remove_assignee:
+        only: editors
+        command: assign editor
+        add_labels:
+          - "1/editor-assigned"
+    label_command:
       only: editors
       command: seeking reviewers
       add_labels:
@@ -35,3 +43,6 @@ buffy:
       - archive:
           only: editors
           sample_value: "10.5281/zenodo.7158585"
+      - reviewers:
+          only: editors
+          sample_value: "@username"
