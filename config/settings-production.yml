@@ -38,7 +38,6 @@ buffy:
       command: seeking reviewers
       add_labels:
         - "2/seeking-reviewers"
-    
     pyopensci_reviewers:
       only:
         - editors
