@@ -16,22 +16,23 @@ buffy:
           command: code of conduct
           description: Show our community Code of Conduct and Guidelines
           message: "Here's the pyOpenSci Community Code of Conduct: https://www.pyopensci.org/governance/CODE_OF_CONDUCT"
+      - assign_eic:
+          only: editors
+          command: assign eic
+          description: Allow editors to move the review to EiC checks
+          template_file: editor-in-chief_checklist.md
+          remove_labels:
+            - "New Submission!"
+          add_labels:
+            - "0/pre-review-checks"
+          add_as_assignee: true
     list_team_members:
       command: list editors
       team_id: 6762239
       heading: Current pyOpenSci editorial board members
       description: "Get a list of all editors's GitHub handles"
     welcome:
-      template_file: welcome_message.md
-    assign_eic:
-      template_file: editor-in-chief_checklist.md
-      only: editors
-      command: assign eic
-      remove_labels:
-        - "New Submission!"
-      add_labels:
-        - "0/pre-review-checks"
-      add_as_assignee: true
+      template_file: welcome_message.md    
     assign_editor:
       only: editors
       add_as_assignee: true
