@@ -41,7 +41,7 @@ buffy:
         - "1/editor-assigned"
       remove_labels:
         - "0/pre-review-checks"
-    seeking_reviewers:
+    label_command:
       only: editors
       command: seeking reviewers
       add_labels:
