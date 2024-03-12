@@ -37,7 +37,6 @@ buffy:
       only: editors
       add_as_assignee: true
       message: "Hey :wave: ! Let's get this review going. The editor guide can be found at https://www.pyopensci.org/software-peer-review/how-to/editors-guide.html"
-      command: assign editor
       add_labels:
         - "1/editor-assigned"
       remove_labels:
