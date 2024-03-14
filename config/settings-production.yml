@@ -86,21 +86,11 @@ buffy:
           sample_value: "10.5281/zenodo.7158585"
     reminders:
       only: editors
-      authors:
-        - author1
-        - author2
     add_remove_assignee:
       only: editors
       hidden: true
     initial_values:
       values:
-        - version:
-          - value: "vX.X.X"
-          - action: append
-        - author1:
-          - heading: "Author Github handle:"
-          - warn_if_empty: true
+        - version-submitted
         - target-repository
-        - archive
-        - package-name:
-          - warn_if_empty: true
+        - author-handle
