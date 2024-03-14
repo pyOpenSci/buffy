@@ -60,23 +60,23 @@ buffy:
       - reviewers_assigned:
           only: editors
           command: reviewers assigned
-          add-labels: 
+          add_labels: 
             - "3/reviewer(s)-assigned"
           remove_labels:
             - "2/seeking-reviewers" 
       - reviewers_are_in:
           only: editors
           command: reviews are in
-          add-labels: 
+          add_labels: 
             - "4/review-in-awaiting-changes" 
-          remove-labels:
+          remove_labels:
             - "3/reviewer(s)-assigned"
       - author_response_complete:
           only: editors
           command:  author response complete 
-          add-labels: 
+          add_labels: 
             - "5/awaiting-reviewer-response" 
-          remove-labels: 
+          remove_labels: 
             - "4/review-in-awaiting-changes" 
     set_value:
       - version:
