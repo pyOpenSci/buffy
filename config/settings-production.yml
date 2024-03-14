@@ -51,16 +51,16 @@ buffy:
       add_as_assignee: false
     add_remove_checklist:
       - editor response
-        only: editors
-        template_file: editor_response.md
-        data_from_issue:
-          - reviewers-list
-          - author-handle
+          only: editors
+          template_file: editor_response.md
+          data_from_issue:
+            - reviewers-list
+            - author-handle
       - package accepted
-        only: editors
-        template_file: package-accepted-template.md
-        data_from_issue:
-          - package-name
+          only: editors
+          template_file: package-accepted-template.md
+          data_from_issue:
+            - package-name
     label_command:
       - seeking_reviewers:
           only: editors
