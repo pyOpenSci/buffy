@@ -52,12 +52,14 @@ buffy:
     add_remove_checklist:
       - editor response
           only: editors
+          command: editor response
           template_file: editor_response.md
           data_from_issue:
             - reviewers-list
             - author-handle
       - package accepted
           only: editors
+          command: package accepted
           template_file: package-accepted-template.md
           data_from_issue:
             - package-name
