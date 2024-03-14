@@ -41,6 +41,10 @@ buffy:
         - "1/editor-assigned"
       remove_labels:
         - "0/pre-review-checks"
+        - "New Submission!"
+    remove_editor:
+      only: editors
+      no_editor_text: "To be decided"
     label_command:
       only: editors
       command: seeking reviewers
@@ -55,3 +59,23 @@ buffy:
       - archive:
           only: editors
           sample_value: "10.5281/zenodo.7158585"
+    reminders:
+      only: editors
+      authors:
+        - author1
+        - author2
+    add_remove_assignee:
+      only: editors
+      hidden: true
+    initial_values:
+      values:
+        - version:
+          - value: "vX.X.X"
+          - action: append
+        - author1:
+          - heading: "Author Github handle:"
+          - warn_if_empty: true
+        - target-repository
+        - archive
+        - package-name:
+          - warn_if_empty: true
