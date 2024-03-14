@@ -45,6 +45,10 @@ buffy:
     remove_editor:
       only: editors
       no_editor_text: "To be decided"
+    reviewers_list:
+      only: editors
+      sample_value: "@reviewer-login"
+      add_as_assignee: false
     label_command:
       only: editors
       command: seeking reviewers
@@ -52,6 +56,14 @@ buffy:
         - "2/seeking-reviewers"
       remove_labels:
         - "1/editor-assigned"
+    label_command:
+      only: editors
+      command: reviewers assigned
+      add-labels: 3/reviewer(s)-assigned 
+    label_command:
+      only: editors
+      command: reviews are in
+      add-labels: 4/review-in-awaiting-changes 
     set_value:
       - version:
           only: editors
