@@ -20,7 +20,7 @@ buffy:
           only: editors
           command: assign eic
           description: Allow editors to move the review to EiC checks
-          template_file: editor-in-chief_checklist.md
+          template_file: editor_in_chief_checklist.md
           remove_labels:
             - "New Submission!"
           add_labels:
