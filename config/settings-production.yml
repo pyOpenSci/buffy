@@ -50,17 +50,17 @@ buffy:
       sample_value: "@reviewer-login"
       add_as_assignee: false
     add_remove_checklist:
-      - editor response
+      - editor_response:
           only: editors
           command: editor response
           template_file: editor_response.md
           data_from_issue:
             - reviewers-list
             - author-handle
-      - package accepted
+      - package_accepted:
           only: editors
           command: package accepted
-          template_file: package-accepted-template.md
+          template_file: package_accepted_template.md
           data_from_issue:
             - package-name
     label_command:
