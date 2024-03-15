@@ -20,7 +20,7 @@ buffy:
           only: editors
           command: assign eic
           description: Allow editors to move the review to EiC checks
-          template_file: editor-in-chief_checklist.md
+          template_file: editor_in_chief_checklist.md
           remove_labels:
             - "New Submission!"
           add_labels:
@@ -36,13 +36,11 @@ buffy:
     assign_editor:
       only: editors
       add_as_assignee: true
-      message: "Hey :wave: ! Let's get this review going. The editor guide can be found at https://www.pyopensci.org/software-peer-review/how-to/editors-guide.html"
       add_labels:
         - "1/editor-assigned"
       remove_labels:
         - "0/pre-review-checks"
         - "New Submission!"
-      add_as_assignee: true
     remove_editor:
       only: editors
     reviewers_list:
