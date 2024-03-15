@@ -35,7 +35,7 @@ buffy:
       template_file: welcome_message.md    
     assign_editor:
       only: editors
-      add_as_assignee: true
+      add_as_collaborator: true
       add_labels:
         - "1/editor-assigned"
       remove_labels:
