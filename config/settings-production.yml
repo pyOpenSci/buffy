@@ -42,7 +42,6 @@ buffy:
       remove_labels:
         - "0/pre-review-checks"
         - "New Submission!"
-      add_as_assignee: true
     remove_editor:
       only: editors
     reviewers_list:
