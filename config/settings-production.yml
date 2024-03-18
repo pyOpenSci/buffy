@@ -105,5 +105,12 @@ buffy:
     initial_values:
       values:
         - version-submitted
+          - warn_if_empty: true
         - target-repository
+          - warn_if_empty: true
         - author-handle
+          - warn_if_empty: true
+    repo_checks:
+      checks:
+        - repo summary
+        - languages
