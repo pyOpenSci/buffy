@@ -90,6 +90,20 @@ buffy:
             - "5/awaiting-reviewer-response" 
           remove_labels: 
             - "4/review-in-awaiting-changes" 
+      - begin_joss_review:
+          only: editors
+          command: begin joss 
+          add_labels: 
+            - "7/under-joss-review" 
+          remove_labels: 
+            - "4/review-in-awaiting-changes" 
+      - joss_approved:
+          only: editors
+          command: joss approved
+          add_labels: 
+            - "9/joss-approved" 
+          remove_labels: 
+            - "7/under-joss-review"
     set_value:
       - version:
           only: editors
