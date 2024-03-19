@@ -118,7 +118,8 @@ buffy:
       hidden: true
     initial_values:
       values:
-        - version-submitted
+        - version-submitted:
+          warn_if_empty: true
         - target-repository
         - author-handle
     repo_checks:
