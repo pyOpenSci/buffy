@@ -112,6 +112,9 @@ buffy:
       - archive:
           only: editors
           sample_value: "10.5281/zenodo.7158585"
+      - eic:
+          only: editors
+          sample_value: "@username"
     reminders:
       only: editors
     add_remove_assignee:
