@@ -41,6 +41,16 @@ buffy:
           template_file: package_accepted_template.md
           data_from_issue:
             - package-name
+            - author-handle
+          remove_labels:
+            - "New Submission!"
+            - "1/editor-assigned"
+            - "2/seeking-reviewers"
+            - "3/reviewer(s)-assigned"
+            - "4/review-in-awaiting-changes" 
+            - "5/awaiting-reviewer-response" 
+          add_labels:
+            - "6/pyOS-approved 🚀🚀🚀"
     list_team_members:
       command: list editors
       team_id: 6762239
