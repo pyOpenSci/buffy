@@ -76,6 +76,7 @@ buffy:
           add_labels: 
             - "3/reviewer(s)-assigned"
           remove_labels:
+            - "1/editor-assigned"
             - "2/seeking-reviewers" 
       - reviewers_are_in:
           only: editors
@@ -83,6 +84,8 @@ buffy:
           add_labels: 
             - "4/review-in-awaiting-changes" 
           remove_labels:
+            - "1/editor-assigned"
+            - "2/seeking-reviewers"
             - "3/reviewer(s)-assigned"
       - author_response_complete:
           only: editors
@@ -90,6 +93,9 @@ buffy:
           add_labels: 
             - "5/awaiting-reviewer-response" 
           remove_labels: 
+            - "1/editor-assigned"
+            - "2/seeking-reviewers"
+            - "3/reviewer(s)-assigned"
             - "4/review-in-awaiting-changes" 
       - begin_joss_review:
           only: editors
