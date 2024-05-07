@@ -18,7 +18,7 @@ buffy:
           message: "Here's the pyOpenSci Community Code of Conduct: https://www.pyopensci.org/governance/CODE_OF_CONDUCT"
       - assign_eic:
           only: editors
-          command: assign eic
+          command: start prereview
           description: Allow editors to move the review to EiC checks
           template_file: editor_in_chief_checklist.md
           remove_labels:
@@ -61,11 +61,12 @@ buffy:
     assign_editor:
       only: editors
       add_as_collaborator: true
-      add_labels:
-        - "1/editor-assigned"
+      add_as_assignee: true
       remove_labels:
         - "0/pre-review-checks"
         - "New Submission!"
+      add_labels:
+        - "1/editor-assigned"
     remove_editor:
       only: editors
     reviewers_list:
