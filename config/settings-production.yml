@@ -19,13 +19,12 @@ buffy:
       - assign_eic:
           only: editors
           command: start prereview
-          description: Allow editors to move the review to EiC checks
+          description: Posts the pre-review template checklist and changes the label to 0/pre-review-checks
           template_file: editor_in_chief_checklist.md
           remove_labels:
             - "New Submission!"
           add_labels:
             - "0/pre-review-checks"
-          add_as_assignee: true
       - editor_response:
           only: editors
           command: editor response
@@ -34,7 +33,6 @@ buffy:
           data_from_issue:
             - reviewers-list
             - author-handle
-          add_as_assignee: true
       - package_accepted:
           only: editors
           command: package accepted
@@ -67,8 +65,10 @@ buffy:
         - "New Submission!"
       add_labels:
         - "1/editor-assigned"
+      description: "Assign a GitHub user to the editor field of the issue and to the issue itself. Also update issue labels."
     remove_editor:
       only: editors
+      description: "Removes the current editor both from the issue header editor: field and from an assignee on the issue."
     reviewers_list:
       only: editors
       sample_value: "@reviewer-login"
@@ -81,6 +81,7 @@ buffy:
             - "2/seeking-reviewers"
           remove_labels:
             - "1/editor-assigned"
+          description: "Adds the seeking-reviewers label to the issue and removes editor-assigned"
       - reviewers_assigned:
           only: editors
           command: reviewers assigned
@@ -89,7 +90,7 @@ buffy:
           remove_labels:
             - "1/editor-assigned"
             - "2/seeking-reviewers" 
-      - reviewers_are_in:
+      - reviews_are_in:
           only: editors
           command: reviews are in
           add_labels: 
@@ -149,3 +150,9 @@ buffy:
       checks:
         - repo summary
         - languages
+    github_action:
+      only: editors
+      command: update website
+      workflow_repo: pyopensci/pyopensci.github.io
+      workflow_name: update-contribs-reviews.yml
+      description: "Triggers a GitHub action which open a pull request to add the accepted package and all review contributors to our website."
